@@ -42,11 +42,11 @@ $(document).on("turbolinks:load", function() {
       processData: false,
       contentType: false
     })
-	  .done(function(data){
+	   .done(function(data){
 		  var html = buildHTML(data);
 	  	$('.messages').append(html);
       ScrollToNewMessage();
-	  	$('.form__message').val('');
+      $('.form__message').reset('');
 	  	$(".form__submit").prop('disabled', false);
 	  })
 	  .fail(function(){
