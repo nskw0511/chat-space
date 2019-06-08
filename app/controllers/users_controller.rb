@@ -1,12 +1,9 @@
 class UsersController < ApplicationController
 
   def index
-    @message = Message.new
-    @messages = @group.messages.includes(:user)
-    @members = @group.users
+    @users = User.where( user.jsから非同期通信で送られてきたkeywordであいまい検索 )
     respond_to do |format|
       format.html
-      format.json { @messages = @messages.where("id > ?", params[:last_id]) }
     end
   end
 

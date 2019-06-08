@@ -58,8 +58,8 @@ $(document).on("turbolinks:load", function() {
 
     $(function(){
       $(document).on('click', '.user-search-add', function() {
-        var name = $(this).attr("data-user-name");
-        var user_id = $(this).attr("data-user-id");
+        var name = $(this).data("data-user-name");
+        var user_id = $(this).data("data-user-id");
         $(this).parent().remove();
         appendUserToMemberList(name, user_id);
       });
