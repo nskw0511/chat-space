@@ -42,7 +42,7 @@ $(document).on("turbolinks:load", function() {
       processData: false,
       contentType: false
     })
-	   .done(function(data){
+	   .done(function(message){
 		  var html = buildHTML(data);
 	  	$('.messages').append(html);
       ScrollToNewMessage();
