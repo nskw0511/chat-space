@@ -1,5 +1,12 @@
 class UsersController < ApplicationController
 
+  def index
+    @users = User.where( user.jsから非同期通信で送られてきたkeywordであいまい検索 )
+    respond_to do |format|
+      format.html
+    end
+  end
+
   def edit
   end
 
@@ -16,4 +23,4 @@ class UsersController < ApplicationController
   def user_params
     params.require(:user).permit(:name, :email)
   end
-endrails g model group_user
+end

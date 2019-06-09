@@ -1,60 +1,24 @@
-# 開発環境
-- Ruby 2.3.1
-- Rails 5.0.7
+# README
 
-# DB設計
-## messagesテーブル
+This README would normally document whatever steps are necessary to get the
+application up and running.
 
-|Column|Type|Options|
-|------|----|-------|
-|id|integer| |
-|body|text| |
-|image|string| |
-|user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
-|timestanmp|datetime| |
+Things you may want to cover:
 
-### Association
-- belongs_to :group
-- belongs_to :user
+* Ruby version
 
+* System dependencies
 
-## usersテーブル
+* Configuration
 
-|Column|Type|Options|
-|------|----|-------|
-|id|integer|index: true|
-|name|string|null: false|
-|email|string|unique: true|
-|password|string| |
-|encrypted_password|string| |
+* Database creation
 
-### Association
-- has_many :groups_users
-- has_many :groups, through: groups_users
-- has_many :messages
+* Database initialization
 
+* How to run the test suite
 
-## groupsテーブル
+* Services (job queues, cache servers, search engines, etc.)
 
-|Column|Type|Options|
-|------|----|-------|
-|id|integer|index: true|
-|group_name|string|null: false|
+* Deployment instructions
 
-### Association
-- has_many :groups_users
-- has_many :users, through: groups_users
-- has_many :messages
-
-
-## groups_usersテーブル
-|Column|Type|Options|
-|------|----|-------|
-|id|integer| |
-|user_id|integer|foreign_key: true|
-|group_id|integer|foreign_key: true|
-
-### Association
-- belongs_to :group
-- belongs_to :user
+* ...
